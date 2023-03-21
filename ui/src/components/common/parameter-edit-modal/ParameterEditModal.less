@@ -1,0 +1,142 @@
+@import (less) '../../../assets/styles/base.less';
+
+@headerHeight: 48px;
+
+.parameter-edit-modal {
+    position: absolute;
+    min-width: 40vw;
+    background-color: @bodyBackgroundColor;
+    border: 1px solid #000;
+    outline: none;
+    z-index: 10000;
+}
+
+.param-modal-body {
+    .flex-column();
+    padding: 10px 20px 10px 2px;
+    max-height: 84vh;
+    overflow: auto;
+}
+
+.param-modal-footer {
+    .flex-row();
+    padding: 10px 20px 10px 20px;
+    justify-content: flex-end;
+
+    .save {
+        margin: 5px;
+    }
+
+    .close {
+        margin: 5px;
+    }
+}
+
+
+.modal-body-row {
+    .flex-row();
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 9px;
+
+    &-desc {
+        padding: 9px 18px;
+        justify-content: stretch;
+        width: 100%;
+
+        textarea {
+            width: 100%;
+            outline: none;
+            border: 1px solid @borderShadowColor;
+            min-height: @headerHeight;
+        }
+    }
+
+    &-ref {
+        .flex-row();
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 6px;
+    }
+}
+
+.modal-body-col {
+    .flex-row();
+    flex: 1;
+    align-items: center;
+    font-size: @fontsm;
+    font-weight: @fontbold;
+    margin-left: 10px;
+    padding-right: 20px;
+
+    label {
+        width: 100%;
+    }
+
+    input, select {
+        border: 1px solid @borderShadowColor;
+        width: 100%;
+    }
+
+    .mark-ref-label {
+        .flex-row();
+        align-items: center;
+        border-bottom: none;
+    }
+
+    .add-property-btn, .add-enum-btn {
+        .flex-row();
+        width: 16px;
+        height: 16px;
+        font-size: @fontmd  !important;
+        background: #5174b8 !important;
+        color: #ffffff !important;
+        .link-hover-effect();
+        margin-left: 6px;
+    }
+
+    .remove-icon {
+        padding-left: 2px;
+        color: #000000;
+        font-size: @fontmd;
+        .link-hover-effect();
+    }
+
+    &-enum {
+        .flex-row();
+        flex: 6;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: 10px;
+        padding-right: 20px;
+        font-size: @fontsm;
+        font-weight: @fontbold;
+
+        input {
+            border: 1px solid @borderShadowColor;
+            min-width: 120px;
+        }
+
+        select {
+            border: 1px solid @borderShadowColor;
+            min-width: 120px;
+            margin-right: 10px;
+        }
+
+        .add-enum-btn {
+            padding-right: 2px;
+            color: #000000;
+            font-size: @fontmd;
+            .link-hover-effect();
+        }
+    }
+
+    &-label-enum {
+        .flex-row();
+        flex: 1;
+        margin-left: 10px;
+        padding-right: 20px;
+        font-size: @fontsm;
+        font-weight: @fontbold;
+    }
+}

@@ -1,0 +1,30 @@
+@import (less) '../../../assets/styles/base.less';
+
+.basic-info-container {
+    .flex-column ();
+    width: 100%
+}
+
+.info-row {
+    .flex-row();
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.info-input {
+    color: @textFocusColor;
+    width: 24vw;
+    margin-top: 20px !important;
+    .info-input-font();
+}
+
+.schemes {
+    align-items: center;
+    margin-top : 20px;
+    span.scheme-checkbox {
+        margin-right: 12px;
+    }
+    span {
+        margin-left: -1px;
+    }
+}

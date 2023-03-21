@@ -1,0 +1,38 @@
+@import (less) '../../../assets/styles/base.less';
+
+.search-box-container {
+    .flex-row ();
+    justify-content: center;
+    margin: 20px;
+}
+
+.search-box-input {
+    width: 15vw;
+    border: none;
+    background-color: #f2f2f2;
+    height: 34px;
+    padding: 0px 0px 0px 40px;
+    padding-top: 0px;
+    border-radius: 16px;
+}
+
+.search-box-input:focus {
+    outline: none;
+    color: @textFocusColor
+}
+
+.search-box-Wrepper {
+    width: 100%;
+}
+
+.search-box-wrapper i {
+    position: absolute;
+    padding-left: 10px;
+}
+
+.search-box-input-icon {
+    font-size: @fontlg  !important;
+    z-index: 2;
+    color: @searchIconColor;
+    margin-top: 6px;
+}

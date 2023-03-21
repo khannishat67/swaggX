@@ -1,0 +1,35 @@
+@import (less) './assets/styles/base.less';
+@import (less) './assets/styles/css-overrides.less';
+@import (less) './assets/styles/helpers.less';
+@font-face {
+  font-family: Lexend-Peta;
+  src: url("assets/fonts/LexendPeta-Regular.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("assets/fonts/Montserrat-SemiBold.ttf");
+}
+html {
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: @bodyBackgroundColor !important;
+}
+
+#root {
+  .flex-column();
+  flex: 1 1 auto;
+  height: 100vh;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}

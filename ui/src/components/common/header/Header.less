@@ -1,0 +1,50 @@
+@import (less) '../../../assets/styles/base.less';
+
+.header {
+    .flex-row();
+    justify-content: space-between;
+    align-items: center;
+    background-color: @headerBackgroundColor;
+    height: @headerHeight;
+    padding-left: 19px;
+    .sticky();
+    top: 0;
+    z-index: 1200;
+
+    .header-btn {
+        margin-right: 20px;
+        color: @bodyBackgroundColor;
+        .link-hover-effect();
+    }
+    &-nav {
+        .flex-row();
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    label {
+        font-size: @fontmd;
+        color: @bodyBackgroundColor;
+        margin-right: 36px;
+    }
+}
+
+.brand {
+    font-family: @primaryFontStyle !important;
+}
+.site-header-wordmark-image {
+    width: 64px;
+    height: 64px;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}

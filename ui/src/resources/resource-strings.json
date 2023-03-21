@@ -1,0 +1,211 @@
+{
+    "logo_alt": "SPECTRUM",
+    "tool_name": "SPECTRUM",
+    "dd_tool_name": "DATA DICTIONARY",
+    "dd_json_btn": "Sample JSON",
+    "dd_xlsx_btn": "Sample Spreadsheet",
+    "openapi_version": "OpenAPI Version",
+    "openapi_versions": [
+        {
+            "id": "v2",
+            "value": "v2",
+            "label": "Swagger V2"
+        },
+        {
+            "id": "v3",
+            "value": "v3",
+            "label": "OpenAPI V3"
+        }
+    ],
+    "select_btn": "PROCEED",
+    "cancel_btn": "CANCEL",
+    "upload_btn": "IMPORT",
+    "welcome_text": "WELCOME: ",
+    "dd_header_link": "Data Dictionary",
+    "dd_import_error": "Failed to Import Data Dictionary",
+    "ok_btn": "OK",
+    "home_btn": "HOME",
+    "logout_btn": "LOG OUT",
+    "choose_label": "Choose:",
+    "create_new_label": "Create New OpenAPI Document",
+    "edit_label": "Import Existing OpenAPI Document",
+    "add_new_btn_label": "ADD NEW",
+    "file_name_placeholder": "Enter File Name",
+    "label_views": "View:",
+    "navaway_title": "Alert!",
+    "save_to_file": "Save to file",
+    "navaway_message": "You are currently navigating away from the page. Any unsaved changes will be lost. Please click 'PROCEED' to continue, 'CANCEL' to stay on the page.",
+    "save_message": "The swagger file will be downloaded into your system.",
+    "download_tooltip": "Download the Swagger file",
+    "basic_info": {
+        "info": "INFO",
+        "title": "Title",
+        "version": "Version",
+        "description": "Description",
+        "schemes": "Schemes",
+        "host": "Host",
+        "basepath": "Base Path",
+        "contact": "Contact",
+        "name": "Name",
+        "url": "URL",
+        "license": "License",
+        "licenseName":"Name",
+        "licenseUrl": "URL",
+        "email": "E-Mail",
+        "schemes_list": [
+            {
+                "id": "http",
+                "value": "http",
+                "label": "http"
+            },
+            {
+                "id": "https",
+                "value": "https",
+                "label": "https"
+            }
+        ]
+    },
+    "path": {
+        "method": "Method",
+        "path": "Path",
+        "description": "Description",
+        "response_label": "Responses",
+        "header_param_label": "Header Parameters",
+        "query_param_label": "Query Parameters",
+        "path_param_label": "Path Parameters",
+        "code": "Response Code",
+        "request_body": "Request Body",
+        "response_body": "Response Body",
+        "http_methods": [
+            {
+                "id": "get",
+                "value": "get",
+                "label": "GET"
+            },
+            {
+                "id": "post",
+                "value": "post",
+                "label": "POST"
+            },
+            {
+                "id": "put",
+                "value": "put",
+                "label": "PUT"
+            },
+            {
+                "id": "delete",
+                "value": "delete",
+                "label": "DELETE"
+            },
+            {
+                "id": "patch",
+                "value": "patch",
+                "label": "PATCH"
+            }
+        ]
+    },
+    "definition": {
+        "addDescription": "click to add description",
+        "save": "Save",
+        "cancel": "Cancel",
+        "array": "Array",
+        "position": "position",
+        "positions": [
+            {
+                "id": "child",
+                "value": "child",
+                "label": "child"
+            },
+            {
+                "id": "sibling",
+                "value": "sibling",
+                "label": "sibling"
+            }
+        ],
+        "name": "name",
+        "type": "type",
+        "types": [
+            {
+                "id": "integer",
+                "value": "integer",
+                "label": "integer"
+            },
+            {
+                "id": "number",
+                "value": "number",
+                "label": "number"
+            },
+            {
+                "id": "string",
+                "value": "string",
+                "label": "string"
+            },
+            {
+                "id": "boolean",
+                "value": "boolean",
+                "label": "boolean"
+            },
+            {
+                "id": "object",
+                "value": "object",
+                "label": "object"
+            }
+        ],
+        "minLength": "minLength",
+        "maxLength": "maxLength",
+        "required": "required",
+        "format": "format",
+        "example": "example",
+        "pattern": "pattern"
+    },
+    "parameter": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "mark_ref": "mark as $ref",
+        "name": "name",
+        "properties": "other properties",
+        "enum": "enum",
+        "in": "in",
+        "ins": [
+            {
+                "id": "header",
+                "value": "header",
+                "label": "header"
+            },
+            {
+                "id": "query",
+                "value": "query",
+                "label": "query"
+            }
+        ],
+        "type": "type",
+        "types": [
+            {
+                "id": "integer",
+                "value": "integer",
+                "label": "integer"
+            },
+            {
+                "id": "number",
+                "value": "number",
+                "label": "number"
+            },
+            {
+                "id": "string",
+                "value": "string",
+                "label": "string"
+            },
+            {
+                "id": "boolean",
+                "value": "boolean",
+                "label": "boolean"
+            }
+        ],
+        "minLength": "minLength",
+        "maxLength": "maxLength",
+        "required": "required",
+        "format": "format",
+        "example": "example",
+        "pattern": "pattern"
+    }
+}

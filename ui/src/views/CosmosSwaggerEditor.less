@@ -1,0 +1,49 @@
+@import '../assets/styles/base.less';
+@import (less) '../assets/styles/helpers.less';
+@editorHeight: 80vh;
+
+.editor-container {
+    margin-top: 20px;
+    height: fit-content;
+}
+
+.editor-container span.vertical {
+    height: @editorHeight;
+}
+
+.editor-container .swagger-editor .swagger-ui .dialog-ux {
+    top: 64px;
+}
+
+
+.swagger-editor .SplitPane {
+    padding: 0px 60px 60px 60px;
+    height: auto !important;
+}
+
+.editor-container .swagger-editor div.SplitPane {
+    height: auto !important;
+}
+
+.Pane2 {
+    overflow-y: scroll;
+    background-color: @bodyBackgroundColor;
+    height: @editorHeight;
+    z-index: 10;
+}
+
+.swagger-editor .swagger-ui .info {
+    .flex-column();
+}
+
+.editor-container .swagger-editor #ace-editor {
+    z-index: 1;
+    height: @editorHeight !important;
+}
+
+.editor-footer {
+    position: fixed;
+    right: 60px;
+    top: 90vh;
+    z-index: 9;
+}

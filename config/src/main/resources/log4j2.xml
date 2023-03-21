@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://logging.apache.org/log41/2.0/config">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+
+			<PatternLayout>
+				<pattern>%d [%t] %-5p %c - %m%n</pattern>
+			</PatternLayout>
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<AsyncRoot level="INFO">
+			<AppenderRef ref="Console" level="INFO" />
+		</AsyncRoot>
+
+	</Loggers>
+</Configuration>

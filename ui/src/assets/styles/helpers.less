@@ -1,0 +1,62 @@
+@import (less) './variables.less';
+
+@amount: range(0, 64, 2);
+each(@amount, {
+    .mt-@{value} {
+        margin-top: (@value * 1px);
+    }
+    .mb-@{value} {
+        margin-bottom: (@value * 1px);
+    }
+    .mr-@{value} {
+        margin-right: (@value * 1px);
+    }
+    .ml-@{value} {
+        margin-left: (@value * 1px);
+    }
+    .m-@{value} {
+        margin: (@value * 1px);
+    }
+    .pt-@{value} {
+        padding-top: (@value * 1px);
+    }
+    .pb-@{value} {
+        padding-bottom: (@value * 1px);
+    }
+    .pr-@{value} {
+        padding-right: (@value * 1px);
+    }
+    .pl-@{value} {
+        padding-left: (@value * 1px);
+    }
+    .p-@{value} {
+        padding: (@value * 1px);
+    }
+});
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
+
+@sizeAmount: range(0,100,1);
+each(@sizeAmount, {
+    .w-@{value} {
+        width: (@value * 1%);
+    }
+    .h-@{value} {
+        height: (@value * 1%);
+    }
+})
+.text-white {
+    color: white;
+}

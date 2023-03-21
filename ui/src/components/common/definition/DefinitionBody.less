@@ -1,0 +1,60 @@
+@import (less) '../../../assets/styles/base.less';
+@import (less) '../../../assets/styles/variables.less';
+
+@shadowColor: 0px 2px 4px #bbbbbb;
+@shadowColorDeep: 0px 8px 16px #bbbbbb;
+
+.card-shadow {
+    background: @bodyBackgroundColor;
+    -webkit-box-shadow: @shadowColor;
+    -moz-box-shadow: @shadowColor;
+    box-shadow: @shadowColor;
+}
+
+.definition-container {
+    &-thumbnail {
+        .flex-column();
+        .card-shadow();
+        width: 274px;
+        height: 300px;
+        font-family: Montserrat;
+        border-radius: 4px;
+
+        margin-right: 16px;
+        margin-bottom: 16px;
+        input {
+            font-family: Montserrat;
+        }
+    }
+
+    &-list {
+        margin: 5px 20px 20px 5px;
+    }
+}
+
+.definition-header-container {
+    .flex-row();
+    padding: 8px;
+    border-radius: 4px 4px 0 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @headerBackgroundColor;
+}
+
+
+.definition-body-container {
+    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
+    border-radius: 0 0 4px 4px;
+    background: @elementBodyBackgroundColor;
+}
+
+.editable-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid @primaryColor;
+    &:focus {
+        outline: none;
+    }
+}

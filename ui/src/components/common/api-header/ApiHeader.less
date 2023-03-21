@@ -1,0 +1,80 @@
+@import (less) '../../../assets/styles/base.less';
+
+@inputWidth: 32vw;
+@inputHeight: 40px;
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .api-header-toolbar-icon {
+        font-size: 40px !important;
+        width: 46px;
+        height: 48px;
+        background: @bodyBackgroundColor !important;
+        margin-left: 6px;
+        .linkcursor();
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.api-header {
+    .flex-row();
+    justify-content: space-between;
+}
+
+.api-title-input {
+    background-color: @wfAreaBackgroundColor;
+    width: @inputWidth;
+    height: @inputHeight;
+    margin-bottom: 2px;
+    border: none;
+    border-bottom: 1.5px solid @borderShadowColor;
+    font-size: @fontlg;
+    font-style: italic;
+    color: @borderShadowColor;
+
+    &:focus {
+        outline: none;
+        color: @textFocusColor;
+    }
+}
+
+.api-title-input-offfocus {
+    color: @textFocusColor;
+    border: none;
+    font-style: normal;
+}
+
+.api-header-toolbar {
+    .flex-row();
+    justify-content: flex-end;
+    margin-left: 18px;
+}
+
+.api-header-toolbar-icon {
+    font-size: 40px !important;
+    height: 40px;
+    background: @bodyBackgroundColor !important;
+    margin-left: 6px;
+    .linkcursor();
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+
+.api-header-toolbar-icon-selected {
+    .api-header-toolbar-icon();
+    background: @iconSelectedColor  !important;
+    color: @bodyBackgroundColor  !important;
+}
+
+.api-header-label {
+    .flex-row();
+    align-items: flex-start;
+    font-size: @fontmd;
+    margin: 10px 10px 0px 0px;
+}

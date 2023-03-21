@@ -1,0 +1,14 @@
+**/.classpath
+**/.project
+**/target
+**/log
+**/.settings
+**/*.jar
+**/.factorypath
+!/.gitignore
+**/node_modules
+**/build
+**/.idea
+**/.vscode
+*.iml
+*.tgz

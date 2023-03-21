@@ -1,0 +1,60 @@
+@import (less) '../../../assets/styles/base.less';
+
+@treeNodeHeight: 30px;
+@treeNodeWidth: 200px;
+
+.tree-container {
+    width: 100%;
+    height: 100%;
+}
+
+.node-item {
+    min-height: calc(@treeNodeHeight + 10px);
+}
+.rc-tree-node-selected {
+    .node-container {
+        border: 1px solid @primaryColor;
+    }
+}
+.rc-tree .rc-tree-treenode .rc-tree-node-content-wrapper {
+    height: calc(@treeNodeHeight + 6px);
+}
+.rc-tree-treenode {
+    display: flex;
+    align-items: center;
+}
+.rc-tree .rc-tree-treenode span.rc-tree-iconEle.rc-tree-icon__customize {
+    height: calc(@treeNodeHeight + 6px);
+}
+
+.node-container {
+    .flex-row();
+    min-width: @treeNodeWidth;
+    min-height: @treeNodeHeight;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(247, 248, 250);
+    color: rgb(124, 114, 224);
+    font-size: @fontmd;
+}
+
+.type-container {
+    .flex-row();
+    Justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: rgb(236, 237, 239);
+    font-size: @fontsm;
+}
+
+.title-container {
+    font-size: @fontsm;
+    .elipses();
+}
+
+.required-container {
+    color: red;
+}

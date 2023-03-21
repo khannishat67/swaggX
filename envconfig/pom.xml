@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="
+http://www. w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven, apache.org/POM/4.0.0
+http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>swaggerstudio-envconfig</artifactId>
+	<name>swaggerstudio Env Config</name>
+	<packaging>jar</packaging>
+	<description>Swagger Studio Env Config services</description>
+	<parent>
+		<groupId>com.cosmos.api</groupId>
+		<artifactId>swagger-studio</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<properties>
+		<sonar.coverage.exclusions>**</sonar.coverage.exclusions>
+		<sonar.skip>true</sonar.skip>
+	</properties>
+	<!-- <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<configuration>
+					<skipSource>true</skipSource>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<skipIfEmpty>true</skipIfEmpty>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build> -->
+</project>

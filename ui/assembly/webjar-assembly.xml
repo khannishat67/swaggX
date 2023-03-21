@@ -1,0 +1,27 @@
+<assembly>
+ <id>webjar</id>
+ <formats>
+  <format>jar</format>
+ </formats>
+ <includeBaseDirectory>false</includeBaseDirectory>
+
+ <fileSets>
+  <fileSet>
+   <directory>${pom.basedir}/build/static/css</directory>
+   <outputDirectory>META-INF/resources/webjars/${project.artifactId}/static/css</outputDirectory>
+  </fileSet>
+  <fileSet>
+   <directory>${pom.basedir}/build/static/js</directory>
+   <outputDirectory>META-INF/resources/webjars/${project.artifactId}/static/js</outputDirectory>
+  </fileSet>
+<fileSet>
+   <directory>${pom.basedir}/build/static/media</directory>
+   <outputDirectory>META-INF/resources/webjars/${project.artifactId}/static/media</outputDirectory>
+  </fileSet>
+<fileSet>
+   <directory>${pom.basedir}/build/</directory>
+   <outputDirectory>META-INF/resources/webjars/${project.artifactId}/</outputDirectory>
+  </fileSet>
+ </fileSets>
+
+</assembly>

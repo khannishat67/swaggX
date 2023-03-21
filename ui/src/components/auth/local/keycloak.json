@@ -1,0 +1,9 @@
+{
+  "realm": "spectrum",
+  "url": "http://localhost:9000/auth/",
+  "ssl-required": "none",
+  "resource": "spectrum-local-client",
+  "public-client": true,
+  "confidential-port": 0,
+  "clientId": "spectrum-local-client"
+}

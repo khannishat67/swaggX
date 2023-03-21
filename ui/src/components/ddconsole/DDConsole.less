@@ -1,0 +1,43 @@
+@import (less) '../../assets/styles/base.less';
+
+.dd-console {
+    width: 50%;
+    .flex-column();
+    align-self: center;
+    margin-top: 20vh;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.console-header {
+    background: @primaryColor;
+    padding: 16px;
+    color: white;
+    border-radius: 4px 4px 0 0;
+}
+.console-body {
+    .flex-column();
+    justify-content: flex-start;
+    padding: 16px;
+    .home-links {
+        .flex-row();
+        justify-content: space-between;
+        align-items: center;
+        a {
+            text-decoration: none;
+        }
+        .btn-download {
+            margin: 20px 0px 20px 0px;
+        }
+    }
+    .error {
+        color: red;
+        font-size: @fontsm;
+    }
+}
+
+.home-header-label {
+    font-family: @primaryFontStyle;
+    font-weight: @fontlg;
+    color: @headerBackgroundColor;
+}

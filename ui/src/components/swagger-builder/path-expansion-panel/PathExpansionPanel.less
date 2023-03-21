@@ -1,0 +1,74 @@
+@import (less) '../../../assets/styles/base.less';
+
+.path-section {
+    .flex-column ();
+}
+
+
+.path-section-card-response-header {
+    background-color: @responseHeaderColor  !important;
+    padding: 0 24px 0 12px !important;
+}
+
+.path-section-request-card-body {
+    padding: 8px 0px 24px !important;
+    border : none;
+}
+
+.path-section-response-card-body {
+    padding: 8px 0px 24px !important;
+    border : none;
+}
+
+.path-section-header {
+    .flex-row ();
+    align-items: flex-start;
+    width: 100%;
+}
+
+.method-block {
+    text-align: center;
+    &-get {
+        color: #61affe;
+        width: 25%;
+    }
+    &-post {
+        color: #49cc90;
+        width: 25%;
+
+    }
+    &-put {
+        color: #fca130;
+        width: 25%;
+
+    }
+    &-delete {
+        color: #f93e3e;
+        width: 25%;
+
+    }
+    &-patch {
+        color: #50e3c2;
+        width: 25%;
+
+    }
+}
+
+.path-block {
+    flex: 2 2 auto;
+    margin : 0px 10px 0px 10px;
+    padding: 5px;
+    color: @pathHeaderColor;
+    .elipses();
+    overflow: hidden;
+    width: 8vw;
+}
+
+.description-block {
+    flex: 7 7 auto;
+    margin : 0px 10px 0px 10px;
+    padding: 5px;
+    color: @pathHeaderColor;
+    .elipses ();
+    width: 20vw;
+}

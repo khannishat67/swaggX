@@ -1,0 +1,60 @@
+@import (less) '../../../assets/styles/base.less';
+
+.contact-container {
+    .flex-column();
+    flex: 1 1 auto;
+}
+
+.add-email-btn {
+    font-size : 18px !important;
+    background: green !important;
+    color: #ffffff !important;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.email-container {
+    .flex-column();
+    flex-wrap: wrap;
+    margin-top: 10px !important;
+}
+
+.email-input-container {
+    .flex-row();
+}
+
+.email-div {
+    display: inline-block;
+    margin: 5px 5px 5px 0px;
+    padding: 5px;
+    border: 1px solid @borderShadowColor;
+    border-radius: 15px;
+    font-size: @fontsm;
+    background: @wfAreaBackgroundColor;
+}
+
+.email-span {
+    .flex-row();
+    align-items: center;
+    margin: 2px 5px;
+}
+
+.email-icon {
+    padding-left: 2px;
+    color: @textFocusColor;
+    font-size: @fontmd;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.email-list-container {
+    width: 22vw;
+    height: auto;
+    margin-top: 5px;
+}

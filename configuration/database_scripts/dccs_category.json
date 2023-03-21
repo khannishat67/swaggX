@@ -1,0 +1,1 @@
+[{"_id":{"$oid":"5f61fd5d20de67c2fb106688"},"name":"PARAMETER","description":"","children_ids":["5f645b60e567ad36a1d91324","5f645b60e567ad36a1d91325","5f645b60e567ad36a1d91326","5f645b60e567ad36a1d91327"],"_class":"com.cosmos.api.core.Category"},{"_id":{"$oid":"5f61fd5d20de67c2fb106689"},"name":"BODY","description":"","children_ids":[],"_class":"com.cosmos.api.core.Category"}]

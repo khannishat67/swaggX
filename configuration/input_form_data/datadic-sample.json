@@ -1,0 +1,561 @@
+[
+	{
+		"name": "X-Expires-After",
+		"type": "string",
+		"required": false,
+		"description": "Date in UTC when token expires",
+		"category": "HEADERS",
+		"format": "Date-time",
+		"parent_ids": [
+			"HEADERS"
+		],
+		"dataElement": "X-Expires-After"
+	},
+	{
+		"name": "X-Rate-Limit",
+		"type": "integer",
+		"required": false,
+		"description": "Calls per hour allowed by the user",
+		"category": "HEADERS",
+		"format": "int64",
+		"parent_ids": [
+			"HEADERS"
+		],
+		"dataElement": "X-Rate-Limit"
+	},
+	{
+		"name": "username",
+		"type": "string",
+		"required": false,
+		"category": "PARAMETERS",
+		"parent_ids": [
+			"PARAMETERS"
+		],
+		"dataElement": "username"
+	},
+	{
+		"name": "password",
+		"type": "string",
+		"required": false,
+		"category": "PARAMETERS",
+		"parent_ids": [
+			"PARAMETERS"
+		],
+		"dataElement": "password"
+	},
+	{
+		"name": "Account",
+		"type": "object",
+		"required": false,
+		"description": "Represents an account of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"number",
+			"balance",
+			"allow_scheduled_transactions"
+		],
+		"dataElement": "Account"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the account",
+		"category": "RESOURCES",
+		"format": "int32",
+		"parent_ids": [
+			"Account"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "number",
+		"type": "string",
+		"required": true,
+		"description": "The account number",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Account"
+		],
+		"dataElement": "number"
+	},
+	{
+		"name": "balance",
+		"type": "number",
+		"required": true,
+		"description": "The account balance",
+		"category": "RESOURCES",
+		"format": "double",
+		"parent_ids": [
+			"Account"
+		],
+		"dataElement": "balance"
+	},
+	{
+		"name": "allow_scheduled_transactions",
+		"type": "string",
+		"required": true,
+		"description": "The flag representing if scheduled transactions are allowed",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Account"
+		],
+		"dataElement": "allow_scheduled_transactions"
+	},
+	{
+		"name": "Customer",
+		"type": "object",
+		"required": false,
+		"description": "",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"name"
+		],
+		"dataElement": "Customer"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the customer",
+		"category": "RESOURCES",
+		"format": "int32",
+		"parent_ids": [
+			"Customer"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "name",
+		"type": "string",
+		"required": true,
+		"description": "The name of the customer",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Customer"
+		],
+		"dataElement": "name"
+	},
+	{
+		"name": "AccountType",
+		"type": "object",
+		"required": false,
+		"description": "Represents an account type of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"description"
+		],
+		"dataElement": "AccountType"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the account type",
+		"category": "RESOURCES",
+		"format": "int32",
+		"parent_ids": [
+			"AccountType"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "description",
+		"type": "string",
+		"required": true,
+		"description": "The description of the account type",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"AccountType"
+		],
+		"dataElement": "description"
+	},
+	{
+		"name": "Frequency",
+		"type": "object",
+		"required": false,
+		"description": "Represents an frequency of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"description"
+		],
+		"dataElement": "Frequency"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the frequency",
+		"category": "RESOURCES",
+		"format": "int32",
+		"parent_ids": [
+			"Frequency"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "description",
+		"type": "string",
+		"required": true,
+		"description": "The description of the frequency",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Frequency"
+		],
+		"dataElement": "description"
+	},
+	{
+		"name": "TransferType",
+		"type": "object",
+		"required": false,
+		"description": "Represents an transfer type of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"description"
+		],
+		"dataElement": "TransferType"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the transfer type",
+		"category": "RESOURCES",
+		"format": "int32",
+		"parent_ids": [
+			"TransferType"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "description",
+		"type": "string",
+		"required": true,
+		"description": "The description of the transfer type",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"TransferType"
+		],
+		"dataElement": "description"
+	},
+	{
+		"name": "Profile",
+		"type": "object",
+		"required": false,
+		"description": "Represents a Transfer Profile of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"transfer_amount",
+			"transfer_date",
+			"transfer_memo"
+		],
+		"dataElement": "Profile"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"category": "RESOURCES",
+		"format": "int32",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "transfer_amount",
+		"type": "number",
+		"required": true,
+		"minLength": "0.01",
+		"description": "The transfer amount",
+		"category": "RESOURCES",
+		"format": "double",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "transfer_amount"
+	},
+	{
+		"name": "transfer_date",
+		"type": "string",
+		"required": true,
+		"description": "The transfer date",
+		"category": "RESOURCES",
+		"format": "date-time",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "transfer_date"
+	},
+	{
+		"name": "transfer_memo",
+		"type": "string",
+		"required": true,
+		"description": "The transfer memo",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "transfer_memo"
+	},
+	{
+		"name": "TransactionSubType",
+		"type": "object",
+		"required": false,
+		"description": "represents a transaction subtype of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"description"
+		],
+		"dataElement": "TransactionSubType"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the transaction subtype",
+		"category": "RESOURCES",
+		"format": "int64",
+		"parent_ids": [
+			"TransactionSubType"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "description",
+		"type": "string",
+		"required": true,
+		"description": "The description of the transaction subtype",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"TransactionSubType"
+		],
+		"dataElement": "description"
+	},
+	{
+		"name": "TransactionType",
+		"type": "object",
+		"required": false,
+		"description": "Represents a transaction type of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"description"
+		],
+		"dataElement": "TransactionType"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the transaction type",
+		"category": "RESOURCES",
+		"format": "int64",
+		"parent_ids": [
+			"TransactionType"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "description",
+		"type": "string",
+		"required": true,
+		"description": "The description of the transaction type",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"TransactionType"
+		],
+		"dataElement": "description"
+	},
+	{
+		"name": "Transaction",
+		"type": "object",
+		"required": false,
+		"description": "Represents a transaction of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"id",
+			"amount",
+			"date",
+			"memo"
+		],
+		"dataElement": "Transaction"
+	},
+	{
+		"name": "id",
+		"type": "integer",
+		"required": true,
+		"description": "The ID of the transaction",
+		"category": "RESOURCES",
+		"format": "int64",
+		"parent_ids": [
+			"Transaction"
+		],
+		"dataElement": "id"
+	},
+	{
+		"name": "amount",
+		"type": "number",
+		"required": true,
+		"description": "The transaction amount",
+		"category": "RESOURCES",
+		"format": "double",
+		"parent_ids": [
+			"Transaction"
+		],
+		"dataElement": "amount"
+	},
+	{
+		"name": "date",
+		"type": "string",
+		"required": true,
+		"description": "The transaction date",
+		"category": "RESOURCES",
+		"format": "date-time",
+		"parent_ids": [
+			"Transaction"
+		],
+		"dataElement": "date"
+	},
+	{
+		"name": "memo",
+		"type": "string",
+		"required": true,
+		"description": "The transfer memo",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Transaction"
+		],
+		"dataElement": "memo"
+	},
+	{
+		"name": "Transfer",
+		"type": "object",
+		"required": false,
+		"description": "Represents a transaction of the system",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"amount",
+			"memo"
+		],
+		"dataElement": "Transfer"
+	},
+	{
+		"name": "amount",
+		"type": "number",
+		"required": true,
+		"description": "The transaction amount",
+		"category": "RESOURCES",
+		"format": "double",
+		"parent_ids": [
+			"Transfer"
+		],
+		"dataElement": "amount"
+	},
+	{
+		"name": "memo",
+		"type": "string",
+		"required": true,
+		"description": "The transfer memo",
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Transfer"
+		],
+		"dataElement": "memo"
+	},
+	{
+		"name": "Error",
+		"type": "object",
+		"required": false,
+		"minLength": "",
+		"maxLength": "",
+		"description": "Represent an error in the system",
+		"values": [
+			""
+		],
+		"category": "ERRORS",
+		"format": "",
+		"parent_ids": [
+			"ERRORS"
+		],
+		"children_ids": [
+			"code",
+			"message"
+		],
+		"dataElement": "Error"
+	},
+	{
+		"name": "code",
+		"type": "integer",
+		"required": false,
+		"minLength": "",
+		"maxLength": "",
+		"description": "The error status code",
+		"values": [
+			""
+		],
+		"category": "ERRORS",
+		"format": "int32",
+		"parent_ids": [
+			"Error"
+		],
+		"dataElement": "code"
+	},
+	{
+		"name": "message",
+		"type": "string",
+		"required": false,
+		"minLength": "",
+		"maxLength": "",
+		"description": "The error message",
+		"values": [
+			""
+		],
+		"category": "ERRORS",
+		"format": "",
+		"parent_ids": [
+			"Error"
+		],
+		"dataElement": "message"
+	}
+]

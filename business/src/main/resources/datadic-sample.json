@@ -1,0 +1,456 @@
+[
+	{
+		"name": "X-Expires-After",
+		"type": "string",
+		"required": false,
+		"description": "Date in UTC when token expires",
+		"values": [
+			""
+		],
+		"category": "HEADERS",
+		"format": "Date-time",
+		"parent_ids": [
+			"HEADERS"
+		],
+		"dataElement": "X-Expires-After"
+	},
+	{
+		"name": "X-Rate-Limit",
+		"type": "integer",
+		"required": false,
+		"description": "Calls per hour allowed by the user",
+		"values": [
+			""
+		],
+		"category": "HEADERS",
+		"format": "int64",
+		"parent_ids": [
+			"HEADERS"
+		],
+		"dataElement": "X-Rate-Limit"
+	},
+	{
+		"name": "username",
+		"type": "string",
+		"required": false,
+		"description": "",
+		"values": [
+			""
+		],
+		"category": "PARAMETERS",
+		"parent_ids": [
+			"PARAMETERS"
+		],
+		"dataElement": "username"
+	},
+	{
+		"name": "password",
+		"type": "string",
+		"required": false,
+		"description": "",
+		"values": [
+			""
+		],
+		"category": "PARAMETERS",
+		"parent_ids": [
+			"PARAMETERS"
+		],
+		"dataElement": "password"
+	},
+	{
+		"name": "Product",
+		"type": "object",
+		"required": true,
+		"description": "Represents a product in the system",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"product_id",
+			"description",
+			"display_name",
+			"capacity",
+			"image"
+		],
+		"dataElement": "Product"
+	},
+	{
+		"name": "product_id",
+		"type": "string",
+		"required": false,
+		"description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Product"
+		],
+		"dataElement": "product_id"
+	},
+	{
+		"name": "description",
+		"type": "string",
+		"required": false,
+		"description": "Description of product",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Product"
+		],
+		"dataElement": "description"
+	},
+	{
+		"name": "display_name",
+		"type": "string",
+		"required": false,
+		"description": "Display name of product",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Product"
+		],
+		"dataElement": "display_name"
+	},
+	{
+		"name": "capacity",
+		"type": "string",
+		"required": false,
+		"description": "Capacity of product. For example, 4 people",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Product"
+		],
+		"dataElement": "capacity"
+	},
+	{
+		"name": "image",
+		"type": "string",
+		"required": false,
+		"description": "Image URL representing the product",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Product"
+		],
+		"dataElement": "image"
+	},
+	{
+		"name": "Activity",
+		"type": "object",
+		"required": false,
+		"description": "",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"uuid"
+		],
+		"dataElement": "Activity"
+	},
+	{
+		"name": "uuid",
+		"type": "string",
+		"required": false,
+		"description": "Unique identifier for the activity",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Activity"
+		],
+		"dataElement": "uuid"
+	},
+	{
+		"name": "PriceEstimate",
+		"type": "object",
+		"required": false,
+		"description": "",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"product_id",
+			"currency_code",
+			"display_name",
+			"estimate",
+			"low_estimate",
+			"high_estimate",
+			"surge_multiplier"
+		],
+		"dataElement": "PriceEstimate"
+	},
+	{
+		"name": "product_id",
+		"type": "string",
+		"required": false,
+		"description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"PriceEstimate"
+		],
+		"dataElement": "product_id"
+	},
+	{
+		"name": "currency_code",
+		"type": "string",
+		"required": false,
+		"description": "ISO 4217 currency code",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"PriceEstimate"
+		],
+		"dataElement": "currency_code"
+	},
+	{
+		"name": "display_name",
+		"type": "string",
+		"required": false,
+		"description": "Display name of product",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"PriceEstimate"
+		],
+		"dataElement": "display_name"
+	},
+	{
+		"name": "estimate",
+		"type": "string",
+		"required": false,
+		"description": "Formatted string of estimate in local currency of the start location. Estimate could be a range, a single number (flat rate) or Metered for TAXI",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"PriceEstimate"
+		],
+		"dataElement": "estimate"
+	},
+	{
+		"name": "low_estimate",
+		"type": "number",
+		"required": false,
+		"description": "Lower bound of the estimated price",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"PriceEstimate"
+		],
+		"dataElement": "low_estimate"
+	},
+	{
+		"name": "high_estimate",
+		"type": "number",
+		"required": false,
+		"description": "Upper bound of the estimated price",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"PriceEstimate"
+		],
+		"dataElement": "high_estimate"
+	},
+	{
+		"name": "surge_multiplier",
+		"type": "number",
+		"required": false,
+		"description": "Expected surge multiplier. Surge is active if surge_multiplier is greater than 1. Price estimate already factors in the surge multiplier",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"PriceEstimate"
+		],
+		"dataElement": "surge_multiplier"
+	},
+	{
+		"name": "Profile",
+		"type": "object",
+		"required": false,
+		"description": "",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"RESOURCES"
+		],
+		"children_ids": [
+			"first_name",
+			"last_name",
+			"email",
+			"picture",
+			"promo_code"
+		],
+		"dataElement": "Profile"
+	},
+	{
+		"name": "first_name",
+		"type": "string",
+		"required": false,
+		"description": "First name of the Uber user",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "first_name"
+	},
+	{
+		"name": "last_name",
+		"type": "string",
+		"required": false,
+		"description": "Last name of the Uber user",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "last_name"
+	},
+	{
+		"name": "email",
+		"type": "string",
+		"required": false,
+		"description": "Email address of the Uber user",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "email"
+	},
+	{
+		"name": "picture",
+		"type": "string",
+		"required": false,
+		"description": "Image URL of the Uber user",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "picture"
+	},
+	{
+		"name": "promo_code",
+		"type": "string",
+		"required": false,
+		"description": "Promo code of the Uber user",
+		"values": [
+			""
+		],
+		"category": "RESOURCES",
+		"parent_ids": [
+			"Profile"
+		],
+		"dataElement": "promo_code"
+	},
+	{
+		"name": "Error",
+		"type": "object",
+		"required": false,
+		"description": "Represents an error in the system",
+		"values": [
+			""
+		],
+		"category": "ERRORS",
+		"parent_ids": [
+			"ERRORS"
+		],
+		"children_ids": [
+			"code",
+			"message",
+			"fields"
+		],
+		"dataElement": "Error"
+	},
+	{
+		"name": "code",
+		"type": "integer",
+		"required": false,
+		"description": "The error status code",
+		"values": [
+			""
+		],
+		"category": "ERRORS",
+		"format": "int32",
+		"parent_ids": [
+			"Error"
+		],
+		"dataElement": "code"
+	},
+	{
+		"name": "message",
+		"type": "string",
+		"required": false,
+		"description": "The error message",
+		"values": [
+			""
+		],
+		"category": "ERRORS",
+		"parent_ids": [
+			"Error"
+		],
+		"dataElement": "message"
+	},
+	{
+		"name": "fields",
+		"type": "string",
+		"required": false,
+		"description": "The error fields",
+		"values": [
+			""
+		],
+		"category": "ERRORS",
+		"parent_ids": [
+			"Error"
+		],
+		"dataElement": "fields"
+	}
+]

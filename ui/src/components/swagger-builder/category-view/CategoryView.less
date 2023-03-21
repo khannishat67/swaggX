@@ -1,0 +1,20 @@
+@import (less) '../../../assets/styles/base.less';
+@import (less) '../../../assets/styles/variables.less';
+
+@shadowColor: 0px 1px 2px #bbbbbb;
+
+.category-view-container {
+    max-width: 27vw;
+    .flex-grow();
+}
+
+.loader {
+    position: relative;
+    .flex-row ();
+    justify-content: center;
+    align-items    : center;
+    font-size      : @fontsm;
+    font-weight    : @fontbold;
+    text-transform: lowercase;
+    font-family: @secondaryFontStyle;
+}
